@@ -1,0 +1,22 @@
+import random
+while True:
+    Player = str(input("enter rock Paper or Scissors: "))
+    RPS = ["rock", "paper", "Scissors"]
+    PC = random.choice(RPS)
+    if PC == "rock" and Player == "Paper":
+        print(PC, Player)
+        print("player wins\n")
+    elif PC == "paper" and Player == "rock":
+        print(PC, Player)
+        print("PC wins\n")
+    elif PC == "Scissors" and Player == "rock":
+        print(PC, Player)
+        print("player wins\n")
+    elif PC == "rock" and Player == "Scissors":
+        print(PC, Player)
+        print("PC wins\n")
+    elif PC == Player:
+        print(PC, Player)
+        print("draw\n")
+    else:
+        print("somthing went wrong\n")
