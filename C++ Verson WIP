@@ -1,9 +1,36 @@
-#include <iostream>
+include <iostream>
 #include <random>
 using namespace std;
 
 int main()
 {
-    int PC = rand() % 3;
-    std::cout << PC;
+    while (true)
+    {
+        string x;
+        cout << "Enter R, P, or S: ";
+        cin >> x;
+
+        int PC = rand() % 3;
+        if (PC == 1 and x == "r" or PC == 2 and x == "p" or PC == 3 and x == "s")
+        {
+            cout << "Draw\n";
+        }
+        else if (PC == 1 and x == "p" or PC == 2 and x == "s" or PC == 3 and x == "r")
+        {
+            cout << "Player wins\n";
+        }
+        else if (PC == 1 and x == "s" or PC == 2 and x == "r" or PC == 3 and x == "p")
+        {
+            cout << "PC wins\n";
+        }
+        else if (x == "exit")
+        {
+            return 0;
+        }
+        else
+        {
+            cout << "ERROR\n";
+        }
+    }
+    return 0;
 }
